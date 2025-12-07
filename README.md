@@ -340,7 +340,7 @@ Open source for educational purposes. Use freely for learning.
 
 ## 🙏 Acknowledgments
 
-- Built for 24-hour hackathon
+- Built for 24-hour Tech N Hack hackathon
 - Designed for Indian farmers
 - Made with ❤️ for agricultural innovation
 
@@ -348,8 +348,8 @@ Open source for educational purposes. Use freely for learning.
 
 ## 👨‍💻 Created By
 
-**Your Name / Team Name**  
-Date: December 2024  
+**Aniket Lodhi, harsh kumar , Raushan kumar , Shakshi Singh , Prerna Verma  / deepvision coders **  
+Date:  07 December 2024  
 Duration: 24 Hours
 
 ---
