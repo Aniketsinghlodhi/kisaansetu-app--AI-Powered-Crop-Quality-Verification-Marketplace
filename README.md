@@ -1,3 +1,5 @@
+# HACK N TECH HACKATHON  2.0
+
 # 🌾 KisaanSetu-App
 
 **AI-Powered Agricultural Marketplace & Crop Quality Verification Platform**
