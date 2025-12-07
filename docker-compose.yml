@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: kisaansetu-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: kisaansetu
+    volumes:
+      - mongodb_data:/data/db
+    # The official MongoDB image will handle initial root user creation via
+    # MONGO_INITDB_ROOT_USERNAME and MONGO_INITDB_ROOT_PASSWORD. Removing the
+    # manual mongosh command to avoid race conditions on startup.
+    networks:
+      - kisaansetu-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kisaansetu-backend
+    ports:
+      - "5001:5000"
+    environment:
+      PORT: 5000
+      MONGODB_URI: mongodb://admin:password123@mongodb:27017/kisaansetu?authSource=admin
+      JWT_SECRET: your-super-secret-key-change-this-in-production-12345
+      NODE_ENV: development
+      FRONTEND_URL: http://localhost:3000
+    depends_on:
+      - mongodb
+    volumes:
+      - ./backend/src:/app/src
+    networks:
+      - kisaansetu-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: kisaansetu-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:5001/api
+    depends_on:
+      - backend
+    networks:
+      - kisaansetu-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  kisaansetu-network:
+    driver: bridge

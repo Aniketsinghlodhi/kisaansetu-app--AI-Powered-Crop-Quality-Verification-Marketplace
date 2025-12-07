@@ -1,0 +1,143 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
+lerna-debug.log*
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+.nyc_output/
+__coverage__
+
+# Production builds
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+*.iml
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# OS specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+mongodb/
+mongo_data/
+
+# API keys and secrets
+.env.secret
+secrets/
+private/
+
+# Package manager lock files (optional - uncomment if you want to commit them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Miscellaneous
+.cache/
+.vuepress/dist
+dist-ssr
+*.local
+.eslintcache
+.stylelintcache
+
+# Git
+.git/
+
+# macOS specific
+.AppleDouble
+.AppleDB
+.LSOverride
+._*
+
+# Windows specific
+[Dd]esktop.ini
+[Ss]ystem Volume Information
+
+# AI-Service (if not needed in git)
+ai-service/node_modules/
+ai-service/.env.local
+
+# Crops images (if these are generated)
+Crops-image/
+
+# VS Code workspace settings
+.vscode/settings.json
+.vscode/extensions.json
+*.code-workspace
+
+# Next.js
+.next/
+out/
+build/
+
+# Environment-specific files
+.env.test
+.env.development
+.env.staging
+
+# Compiled output
+*.o
+*.obj
+*.elf
+*.lib
+*.a
+.so
+
+# IDE temporary directories
+.classpath
+.c9/
+.replit
+replit.nix
+
+# Node version management
+.nvmrc
+.nodenv-version
